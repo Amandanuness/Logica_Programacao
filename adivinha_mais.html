@@ -1,0 +1,38 @@
+<meta charset = "UTF-8">
+
+<input/>
+<button> Compare com o meu segredo </button>
+
+
+<script>
+	var segredo = Math.round (Math.random() *10);
+	console.log;
+
+	var input = document.querySelector("input");    //essa querySelector vai no mundo html acessar o que foi escrito na tag "input". O nome da variável não faz diferença, mas dentro da querySelector, tem que estar correto o nome "input", pq é onde quero acessar no hmtl.
+	input.focus();
+
+	function verifica() {
+
+		if (input.value == segredo) {
+
+			alert("Você acertou");
+
+		} else {
+			alert ("Você ERROU!!!!!");
+
+		}
+
+		input.value = "";  //isso aqui vai apagar o valor imputado no botão, ou seja, o input value
+		input.focus();     // isso aqui deixa o campo brilhoso, em foco
+
+	}
+
+	var button = document.querySelector ("button");
+
+	button.onclick = verifica;  //mesmo o "verifica" sendo uma função, eu não coloquei os parenteses pq, dessa forma, aí sim, a função toda só é chamada no "onclick", que é o clique no botão.
+
+
+
+
+	
+</script>
